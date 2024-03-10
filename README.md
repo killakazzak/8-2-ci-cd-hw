@@ -211,35 +211,11 @@ pipeline {
 
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/31d3e88c-61e9-4c51-a41a-37a3598f44ad)
 
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/aa1ffac7-ce35-4732-afd0-7a5c376b59d5)
+
+
 
 ### Задание 4
-```
-git branch conflict
-git checkout conflict
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/41.png)
-```
-git add test.sh
-git commit -m "conflict commit"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/42.png)
-```
-git push origin conflict
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/43.png)
-```
-git add test.sh
-git commit -m "commit temp"
-git push origin main
-git merge conflict
-git add test.sh
-git commit -m "Resolved conflict in test.sh"
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/44.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/45.png)
-
-[Ссылка на файл test.sh](https://github.com/killakazzak/netology/blob/main/test.sh)
 
 
 
