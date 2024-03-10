@@ -14,6 +14,7 @@ https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/bdc22f61-944d-40db-bd15-e79e3caa182f)
 
 ![Создание репозитория](https://github.com/killakazzak/8-1-git-hw/blob/main/img/2024-02-28_16-32-21.jpg)
 
