@@ -179,6 +179,38 @@ docker run -d -p 192.168.56.10:8081:8081 -p 192.168.56.10:8082:8082 --name nexus
 ```
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/548a06ce-c6a6-425a-84cc-c657b298c696)
 
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/f3fbafda-ede3-4f95-bfc1-eaf587a1f138)
+
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {
+    git branch: 'main', url:'https://github.com/killakazzak/8-2-CI-CD-hw.git'
+   }
+  }
+  stage('Test') {
+   steps {
+    sh 'go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh 'go build -o app .'
+   }
+  }
+  stage('Push') {
+   steps {
+    sh 'curl -u admin:admin --upload-file app "http://10.159.86.111:8081/repository/my_raw_repo/hello-world/hello-world-$BUILD_NUMBER"'
+   }
+  }
+ }
+}
+```
+
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/31d3e88c-61e9-4c51-a41a-37a3598f44ad)
+
 
 ### Задание 4
 ```
