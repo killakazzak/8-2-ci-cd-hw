@@ -160,7 +160,13 @@ pipeline {
  }
 }
 ```
-![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/95d8700c-b8f7-4cd9-adbf-a3cb0b45b4f4)
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/394fdf8f-8a8e-42dc-9eb9-3931a20b410b)
+
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/17e9621e-5822-4d97-855c-fb25009d4dbb)
+
+
+
+
 
 
 
