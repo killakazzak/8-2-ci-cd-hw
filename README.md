@@ -171,34 +171,15 @@ pipeline {
 
 
 ### Задание 3
-```
-git branch dev
-git checkout dev
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/31.png)
-```
-echo "Всем привет!" > test.sh
-git add test.sh
-git commit -m "Commit message"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/32.png)
-```
-git checkout main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/33.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/34.png)
+
+#### Установка Nexus
 
 ```
-git merge dev
+docker run -d -p 192.168.56.10:8081:8081 -p 192.168.56.10:8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
 ```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/35.png)
-```
-git pull
-git push
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/36.png)
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/548a06ce-c6a6-425a-84cc-c657b298c696)
 
-[Ссылка на граф](https://github.com/killakazzak/netology/network)
+
 ### Задание 4
 ```
 git branch conflict
