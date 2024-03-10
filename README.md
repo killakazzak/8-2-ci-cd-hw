@@ -134,66 +134,35 @@ Finished: SUCCESS
 
 
 
-
-
-```
-echo "Hello World!" >> README.md
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/3.png)
-```
-git diff
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/4.png)
-
-```
-git add README.md
-git diff --staged
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/6.png)
-```
-git commit -m 'First commit'
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/7.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/8.png)
-```
-git remote set-url origin https://killakazzak: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@github.com/killakazzak/netology.git
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/9.png)
-
-[Ссылка на commit](https://github.com/killakazzak/netology/commit/22f3d2506c1b15c3ab6f0682a188c405f8e54892)
-
----
-
 ### Задание 2
 
 ```
-touch .gitignore
-git status
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git branch: 'main', url:'https://github.com/killakazzak/8-2-sdvps-materials-hw.git'}
+  }
+  stage('Test') {
+   steps {
+    sh 'go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh 'docker build . -t 10.159.86.111:8082/hello-world:v$BUILD_NUMBER'
+   }
+  }
+  stage('Push') {
+   steps {
+    sh 'docker login 10.159.86.111:8082 -u admin -p admin && docker push 10.159.86.111:8082/hello-world:v$BUILD_NUMBER && docker logout'   }
+  }
+ }
+}
 ```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/21.png)
-```
-git add .gitignore
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/22.png)
-```
-echo "*.pyc" >> .gitignore && echo "cache/" >> .gitignore
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/23.png)
-```
-git add .gitignore
-git commit -m "Second Commit"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/24.png)
-```
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/25.png)
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/95d8700c-b8f7-4cd9-adbf-a3cb0b45b4f4)
 
-[Ссылка на README.md](https://github.com/killakazzak/netology/blob/0d2269d19d0a4587a9e5c471208812acfdc84ecc/README.md)
+
 
 ### Задание 3
 ```
