@@ -16,12 +16,11 @@ sudo apt-get install jenkins
 ```
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/bdc22f61-944d-40db-bd15-e79e3caa182f)
 
-![Создание репозитория](https://github.com/killakazzak/8-1-git-hw/blob/main/img/2024-02-28_16-32-21.jpg)
+```
+apt install golang-go
+```
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/d5db554e-295f-4558-902a-78f6334ee348)
 
-```
-git clone https://github.com/killakazzak/netology.git
-```
-![(https://github.com/killakazzak/8-1-git-hw/blob/main/img/1.jpg)](https://github.com/killakazzak/8-1-git-hw/blob/main/img/1.png)
 ```
 git config --global user.name "Denis Ten"
 git config --global user.email "denis.a.ten@gmail.com"
