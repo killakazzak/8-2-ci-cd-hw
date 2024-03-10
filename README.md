@@ -22,11 +22,21 @@ apt install golang-go
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/d5db554e-295f-4558-902a-78f6334ee348)
 
 
+
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/4aee6f44-cbd6-43d6-b2d7-2171f0cec764)
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/fd3e7080-1076-4d3c-b0cd-cea8c634c92a)
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/2e6c778d-e6f6-4944-b826-6c48a57e74ec)
 
 ![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/a23698ab-657e-4737-a971-f50176eb43fc)
+
+#### Установка Nexus
+
+```
+docker run -d -p 192.168.56.10:8081:8081 -p 192.168.56.10:8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
+```
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/548a06ce-c6a6-425a-84cc-c657b298c696)
+
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/dab72059-9d07-4ed5-a666-d79b1331cd02)
 
 
 ```
@@ -119,6 +129,12 @@ v32: digest: sha256:d5e57f08b444e1939777680fd2c3b95a55719a4d293600b32a5a20e896ee
 Removing login credentials for https://index.docker.io/v1/
 Finished: SUCCESS
 ```
+
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/4ddaed8b-0b36-4730-bef6-e74de2b23629)
+
+
+
+
 
 ```
 echo "Hello World!" >> README.md
