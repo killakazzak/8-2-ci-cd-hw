@@ -217,6 +217,11 @@ pipeline {
 
 ### Задание 4
 
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/916dbd19-689b-491d-a347-08903d741c6f)
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/ff997a3a-3def-4d98-bd53-c7f85901b1b2)
+![image](https://github.com/killakazzak/8-2-ci-cd-hw/assets/32342205/66346d8a-6a48-418f-b2b7-7aabf4441761)
+
+
 
 
 
